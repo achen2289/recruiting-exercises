@@ -33,13 +33,17 @@ class InventoryAllocator:
 				if item in warehouse['inventory'].keys():
 					item_quantity = warehouse['inventory'][item]
 
+					if quantity > item_quantity:
+						all_present = False
+
+					if item_quantity < 0: # skip negative quantities
+						continue
+
 					if existing_items.get(item, None):
 						existing_items[item] += item_quantity
 					else:
 						existing_items[item] = item_quantity
 
-					if quantity > item_quantity:
-						all_present = False
 				else:
 					all_present = False
 			if all_present: # return solution if single warehouse can ship all items
@@ -63,6 +67,8 @@ class InventoryAllocator:
 				if item in finished:
 					continue
 				if item in warehouse['inventory'].keys():
+					if warehouse['inventory'][item] <= 0: # skip negative or 0 quantity
+						continue
 					if quantity <= warehouse['inventory'][item]:
 						curr_items[item] = quantity
 						finished.append(item)
