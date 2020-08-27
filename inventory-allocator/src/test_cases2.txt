@@ -1,3 +1,0 @@
-{"apple": 5, "orange": 12} - [{"name": "owd", "inventory": {"apple": 6}}, {"name": "dm", "inventory": {"apple": 5}}, {"name": "ang", "inventory": {"apple": 5, "orange": 10}}]
-
-{"apple": 5, "orange": 12} - [{"name": "owd", "inventory": {"apple": 6}}, {"name": "dm", "inventory": {"apple": 5}}, {"name": "ang", "inventory": {"apple": 5, "orange": 12}}]
