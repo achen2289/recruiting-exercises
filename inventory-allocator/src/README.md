@@ -8,7 +8,8 @@ I have only tested this program with Python 3.8 on MacOS.
 None
 
 ## Formal testing:
-`python3 generate_shipment_test.py`
+Unit tests with pre-made test cases and assertions:
+  1) `python3 generate_shipment_test.py`
 
 ## Informal/quick testing:
 To test with my test cases ("test_cases.txt"):  
