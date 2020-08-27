@@ -1,0 +1,32 @@
+{"apple": 2} - []
+
+{"apple": 2, "orange": 3} - [{"name": "owd", "inventory": {}}]
+
+{"apple": 5} - [{"name": "owd", "inventory": {}}]
+
+{"Alex": 10} - [{"nam": "owd", "inventory": {}}]
+
+{"orange": 100} - ["owd", "hello"]
+
+{"orange": 100} - {"owd": "hello"}
+
+{"apple": 10} - [{"name": "owd", "inventory": {"apple": 6}}, {"name": "dm", "inventory": {"apple": 5}}]
+
+{"apple": 5} - [{"name": "owd", "inventory": {"apple": 6}}, {"name": "dm", "inventory": {"apple": 5}}]
+
+{"apple": 5, "orange": 12} - [{"name": "owd", "inventory": {"apple": 6}}, {"name": "dm", "inventory": {"apple": 5}}, {"name": "ang", "inventory": {"apple": 5, "orange": 10}}]
+
+{"apple": 5, "orange": 12} - [{"name": "owd", "inventory": {"apple": 6}}, {"name": "dm", "inventory": {"apple": 5}}, {"name": "ang", "inventory": {"apple": 5, "orange": 12}}]
+
+{"apple": 5, "orange": 12} - [{"name": "owd", "inventory": {"apple": 6}}, {"name": "dm", "inventory": {"apple": 5}}, {"name": "ang", "inventory": {"apple": 4, "orange": 12}}]
+
+{"apple": 5, "orange": 12} - [{"name": "owd", "inventory": {"apple": 6}}, {"name": "dm", "inventory": {"apple": 5}}, {"name": "ang", "inventory": {"apple": 4, "orange": 2}}, {"name": "ida", "inventory": {"apple": 6, "orange": 13}}]
+
+{"apple": 5, "orange": 12, "banana": 30, "grapes": 100, "computer": 9} - [{"name": "owd", "inventory": {"apple": 6, "banana": 31}}, {"name": "dm", "inventory": {"apple": 5}}, {"name": "ang", "inventory": {"apple": 4, "orange": 2}}, {"name": "ida", "inventory": {"apple": 6, "orange": 13}}, {"name": "gela", "inventory": {"computer": 3, "grapes": 80, "beef": 40}}, {"name": "joc", "inventory": {"computer": 10, "grapes": 80, "beef": 40}}]
+
+
+
+
+
+
+
