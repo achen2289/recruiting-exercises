@@ -11,7 +11,13 @@ None
 Unit tests with pre-made test cases and assertions:
   1) `python3 generate_shipment_test.py`
 
-## Informal/quick testing:
+## Edge case handling:  
+  1) Duplicate warehouses will return an empty list.
+  2) Quantity values of negative or zero value will be ignored.
+  3) Input of the correct type but lacking certain parameters (such as "name") will result in an empty list.
+  4) Empty inputs will result in an empty list.
+
+## Informal testing:
 To test with my test cases ("test_cases.txt"):  
   1) `python3 generate_shipment.py`
 
@@ -22,9 +28,8 @@ To create your own new test cases:
   4) `python3 generate_shipment.py [TEST_CASE_LOCATION]`  
 
 Note:  
-  1) Lines in test text file must be in the format as described above, or program will skip over them.
-  2) If each input (separated by '-') is in an improper format, my program will return an empty list.  
-  3) All quotes must be double quotes (to be accepted by json.loads()).  
+  1) All quotes in test text file must be double quotes.  
+  2) If each input is in an improper format, the program will return an empty list.  
  
 One line for the output, preceded by two lines for each input (for clarity purposes), will be printed to standard output (hence informal testing).
  
