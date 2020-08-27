@@ -15,18 +15,21 @@ class InventoryAllocator:
 		if not self.item_map or not self.warehouses:
 			return []
 
-		if not isinstance(self.item_map, dict) or not isinstance(self.warehouses, list): # ensure dict & list format
-			# print ("ERROR: Parameter(s) were not of correct type.")
+		if not (isinstance(self.item_map, dict) and isinstance(self.warehouses, list)): # ensure dict & list format
 			return []
+
+		for i in range(len(self.warehouses)): # prevent duplicate warehouses
+			if not isinstance(self.warehouses[i], dict): # ensure dict format
+				return []
+			if not (self.warehouses[i].get('inventory', None) and self.warehouses[i].get('name', None)):
+				return []
+			for j in range(i+1, len(self.warehouses)):
+				if self.warehouses[i]['name'] == self.warehouses[j]['name']:
+					return []
 		
 		# Check if items all exist in a single warehouse with substantial quantity
 		existing_items = {}
 		for warehouse in self.warehouses:
-			if not isinstance(warehouse, dict): # ensure dict format
-				# print ("ERROR: Parameter(s) were not of correct type.")
-				return []
-			if not (warehouse.get('inventory', None) and warehouse.get('name', None)):
-				return []
 			all_present = True
 			# Check all items
 			for item, quantity in self.item_map.items():
